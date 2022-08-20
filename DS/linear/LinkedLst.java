@@ -45,12 +45,15 @@ public class LinkedLst implements Datt {
 
     @Override
     public String toString() {
-        String res = "";
+        String res = "{\n Head :";
         Node temp = head;
-        while (temp != null) {
-            res += temp.getValue();
+        while (temp.getNext() != null) {
+            res += temp.getValue() + "->";
             temp = temp.getNext();
         }
+        res += temp.getValue();
+
+        res += "\n}\n";
         return res;
     }
 }
