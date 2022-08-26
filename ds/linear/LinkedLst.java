@@ -6,7 +6,7 @@ public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
     private Node<T> head = null;
 
     public void add(T value) {
-        Node<T> neww = new Node(value);
+        Node<T> neww = new Node<>(value);
         size++;
         if (head == null) {
             head = neww;
@@ -45,15 +45,15 @@ public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
 
     @Override
     public String toString() {
-        String res = "{\n Head :";
-        Node temp = head;
+        String res = "{ Head :";
+        Node<T> temp = head;
         while (temp.getNext() != null) {
             res += temp.getValue() + "->";
             temp = temp.getNext();
         }
         res += temp.getValue();
 
-        res += "\n}\n";
+        res += " }\n";
         return res;
     }
 }
