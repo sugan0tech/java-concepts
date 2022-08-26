@@ -1,12 +1,12 @@
 package DS.linear;
 
-public class LinkedLst implements Datt {
+public class LinkedLst<T> implements Datt<T> {
     private int size = 0;
 
-    private Node head = null;
+    private Node<T> head = null;
 
-    public void add(int value) {
-        Node neww = new Node(value);
+    public void add(T value) {
+        Node<T> neww = new Node(value);
         size++;
         if (head == null) {
             head = neww;
@@ -18,8 +18,8 @@ public class LinkedLst implements Datt {
         temp.setNext(neww);
     };
 
-    public int get(int index) {
-        Node temp = head;
+    public T get(int index) {
+        Node<T> temp = head;
         while (index > 0) {
             temp = temp.getNext();
             index--;
@@ -31,11 +31,11 @@ public class LinkedLst implements Datt {
         // will implement
     };
 
-    public void deleteFirst(int value) {
+    public void deleteFirst(T value) {
         // will implement
     };
 
-    public void deleteLast(int value) {
+    public void deleteLast(T value) {
         // comming soon
     };
 

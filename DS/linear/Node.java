@@ -1,21 +1,21 @@
 package DS.linear;
 
-public class Node {
-    private int value;
+public class Node<T> {
+    private T value;
     private Node next = null;
 
     public Node() {
     }
 
-    public Node(int value) {
+    public Node(T value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public T getValue() {
         return this.value;
     }
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
