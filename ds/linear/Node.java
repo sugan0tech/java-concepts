@@ -1,7 +1,7 @@
-package DS.linear;
+package ds.linear;
 
 public class Node<T> implements java.io.Serializable {
-    private transient T value;
+    private T value;
     private Node<T> next = null;
 
     public Node() {
@@ -19,7 +19,7 @@ public class Node<T> implements java.io.Serializable {
         this.value = value;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return this.next;
     }
 

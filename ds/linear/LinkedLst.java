@@ -1,4 +1,4 @@
-package DS.linear;
+package ds.linear;
 
 public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
     private int size = 0;
@@ -12,7 +12,7 @@ public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
             head = neww;
             return;
         }
-        Node temp = head;
+        Node<T> temp = head;
         while (temp.getNext() != null)
             temp = temp.getNext();
         temp.setNext(neww);

@@ -1,8 +1,8 @@
-import DS.linear.*;
+import ds.linear.*;
 
 public class TestDS {
     public static void main(String args[]) {
-        LinkedLst lst = new LinkedLst();
+        LinkedLst<Integer> lst = new LinkedLst<>();
         lst.add(1);
         lst.add(2);
         lst.add(3);
