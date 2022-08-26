@@ -1,6 +1,6 @@
 package DS.linear;
 
-public class LinkedLst<T> implements Datt<T> {
+public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
     private int size = 0;
 
     private Node<T> head = null;

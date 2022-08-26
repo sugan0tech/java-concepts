@@ -1,5 +1,7 @@
 package DS.linear;
 
+import java.io.Serializable;
+
 public interface Datt<T> {
     public void add(T value);
 
