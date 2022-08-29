@@ -7,10 +7,12 @@ public interface Datt<T> {
 
     public void delete(int index);
 
-    public void deleteFirst(T value);
+    public void deleteFirst();
 
-    public void deleteLast(T value);
+    public void deleteLast();
 
     public int size();
+
+    public boolean equals(Object obj);
 
 }

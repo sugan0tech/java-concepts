@@ -27,4 +27,12 @@ public class Node<T> implements java.io.Serializable {
         this.next = next;
     }
 
+    public boolean hasNext() {
+        return this.next != null;
+    }
+
+    public boolean equals(Node<T> node) {
+        return this.value == node.value;
+    }
+
 }

@@ -18,6 +18,10 @@ public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
         temp.setNext(neww);
     };
 
+    private Node<T> getHead() {
+        return this.head;
+    }
+
     public T get(int index) {
         Node<T> temp = head;
         while (index > 0) {
@@ -25,23 +29,48 @@ public class LinkedLst<T> implements Datt<T>, java.io.Serializable {
             index--;
         }
         return temp.getValue();
-    };
+    }
 
     public void delete(int index) {
-        // will implement
-    };
+        Node<T> temp = this.head;
+        while (--index > 0) {
+            temp = temp.getNext();
+        }
+        temp.setNext(temp.getNext().getNext());
+    }
 
-    public void deleteFirst(T value) {
-        // will implement
-    };
+    public void deleteFirst() {
+        this.head = this.head.getNext();
+    }
 
-    public void deleteLast(T value) {
-        // comming soon
-    };
+    public void deleteLast() {
+        Node<T> temp = this.head;
+        while (temp.getNext().getNext() != null) {
+            temp = temp.getNext();
+        }
+        temp.setNext(null);
+    }
 
     public int size() {
         return this.size;
-    };
+    }
+
+    public boolean equals(LinkedLst<T> lst) {
+        if (this.size() == lst.size()) {
+            Node<T> temp = this.head;
+            Node<T> ref = lst.getHead();
+            while (temp.hasNext()) {
+                if (!temp.equals(ref)) {
+                    return false;
+                }
+                temp = temp.getNext();
+                ref = ref.getNext();
+            }
+        } else {
+            return false;
+        }
+        return true;
+    }
 
     @Override
     public String toString() {
